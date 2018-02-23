@@ -37,7 +37,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="@string/playerA"
-                    android:textColor="#616161"
+                    android:textColor="@color/player"
                     android:textSize="20sp" />
 
                 <TextView
@@ -48,7 +48,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/amountCardA"
-                    android:textColor="#000000"
+                    android:textColor="@color/score"
                     android:textSize="56sp" />
 
                 <Button
@@ -57,7 +57,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="knockedCardForPlayerA"
                     android:text="@string/knockedCard" />
 
@@ -67,7 +67,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="foulForPlayerA"
                     android:text="@string/foul" />
 
@@ -77,7 +77,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="doubleFoulForPlayerA"
                     android:text="@string/doubleFoul" />
 
@@ -102,7 +102,7 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:text="@string/playerB"
-                    android:textColor="#616161"
+                    android:textColor="@color/player"
                     android:textSize="20sp" />
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
                     android:text="@string/amountCardB"
-                    android:textColor="#000000"
+                    android:textColor="@color/score"
                     android:textSize="56sp" />
 
                 <Button
@@ -122,7 +122,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="knockedCardForPlayerB"
                     android:text="@string/knockedCard" />
 
@@ -132,7 +132,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="foulForPlayerB"
                     android:text="@string/foul" />
 
@@ -142,7 +142,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginRight="24dp"
-                    android:background="#C5CAE9"
+                    android:background="@color/button"
                     android:onClick="doubleFoulForPlayerB"
                     android:text="@string/doubleFoul" />
 
@@ -169,7 +169,7 @@
             android:layout_below="@id/info"
             android:layout_centerHorizontal="true"
             android:layout_margin="28dp"
-            android:background="#C5CAE9"
+            android:background="@color/button"
             android:onClick="startNewMatch"
             android:padding="20dp"
             android:text="@string/newMatch" />
