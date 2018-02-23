@@ -5,22 +5,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.android.karutacardcounter.R;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            g_scorePlayerA = savedInstanceState.getInt(KEY_scorePlayerA);
+            g_scorePlayerB = savedInstanceState.getInt(KEY_scorePlayerB);
+        } else {
+            // Probably initialize members with default values for a new instance
+            g_scorePlayerA = 25;
+            g_scorePlayerB = 25;
+        }
         setContentView(R.layout.activity_main);
+
+        displayForPlayerA(g_scorePlayerA);
+        displayForPlayerB(g_scorePlayerB);
     }
 
 
     /**
      * Set starting amount of cards for both players.
      */
-    int scorePlayerA = 25;
-    int scorePlayerB = 25;
+    int g_scorePlayerA = 25;
+    int g_scorePlayerB = 25;
+
+    // Set key for save value then changing orientation.
+    static final String KEY_scorePlayerA = "Player A score";
+    static final String KEY_scorePlayerB = "Player B score";
 
 
     /**
@@ -35,28 +50,28 @@ public class MainActivity extends AppCompatActivity {
      * Knocked card for Player A.
      */
     public void knockedCardForPlayerA(View view) {
-        scorePlayerA--;
-        displayForPlayerA(scorePlayerA);
+        g_scorePlayerA--;
+        displayForPlayerA(g_scorePlayerA);
     }
 
     /**
      * Foul for Player A.
      */
     public void foulForPlayerA(View view) {
-        scorePlayerA++;
-        scorePlayerB--;
-        displayForPlayerA(scorePlayerA);
-        displayForPlayerB(scorePlayerB);
+        g_scorePlayerA++;
+        g_scorePlayerB--;
+        displayForPlayerA(g_scorePlayerA);
+        displayForPlayerB(g_scorePlayerB);
     }
 
     /**
      * Double foul for Player A.
      */
     public void doubleFoulForPlayerA (View view) {
-        scorePlayerA = scorePlayerA + 2;
-        scorePlayerB = scorePlayerB - 2;
-        displayForPlayerA(scorePlayerA);
-        displayForPlayerB(scorePlayerB);
+        g_scorePlayerA = g_scorePlayerA + 2;
+        g_scorePlayerB = g_scorePlayerB - 2;
+        displayForPlayerA(g_scorePlayerA);
+        displayForPlayerB(g_scorePlayerB);
     }
 
 
@@ -72,28 +87,28 @@ public class MainActivity extends AppCompatActivity {
      * Knocked card for Player B.
      */
     public void knockedCardForPlayerB(View view) {
-        scorePlayerB--;
-        displayForPlayerB(scorePlayerB);
+        g_scorePlayerB--;
+        displayForPlayerB(g_scorePlayerB);
     }
 
     /**
      * Foul for Player B.
      */
     public void foulForPlayerB(View view) {
-        scorePlayerB++;
-        scorePlayerA--;
-        displayForPlayerB(scorePlayerB);
-        displayForPlayerA(scorePlayerA);
+        g_scorePlayerB++;
+        g_scorePlayerA--;
+        displayForPlayerB(g_scorePlayerB);
+        displayForPlayerA(g_scorePlayerA);
     }
 
     /**
      * Double foul for Player B.
      */
     public void doubleFoulForPlayerB (View view) {
-        scorePlayerB = scorePlayerB + 2;
-        scorePlayerA = scorePlayerA - 2;
-        displayForPlayerB(scorePlayerB);
-        displayForPlayerA(scorePlayerA);
+        g_scorePlayerB = g_scorePlayerB + 2;
+        g_scorePlayerA = g_scorePlayerA - 2;
+        displayForPlayerB(g_scorePlayerB);
+        displayForPlayerA(g_scorePlayerA);
     }
 
 
@@ -101,9 +116,25 @@ public class MainActivity extends AppCompatActivity {
      * Start a new match.
      */
     public void startNewMatch(View view) {
-        scorePlayerA = 25;
-        scorePlayerB = 25;
-        displayForPlayerA(scorePlayerA);
-        displayForPlayerB(scorePlayerB);
+        g_scorePlayerA = 25;
+        g_scorePlayerB = 25;
+        displayForPlayerA(g_scorePlayerA);
+        displayForPlayerB(g_scorePlayerB);
+    }
+
+
+    /**
+     * Save current state player's scores then changing orientation.
+     * @param savedInstanceState player's scores.
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        // Save current state player's scores.
+        savedInstanceState.putInt(KEY_scorePlayerA, g_scorePlayerA);
+        savedInstanceState.putInt(KEY_scorePlayerB, g_scorePlayerB);
+
+        // Always call the superclass so it can save the view hierarchy state.
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
