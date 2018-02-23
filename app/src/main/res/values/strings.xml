@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Karuta Card Counter</string>
+    <string name="playerA">Player A</string>
+    <string name="playerB">Player B</string>
+    <string name="knockedCard">Knocked Card</string>
+    <string name="foul">Foul</string>
+    <string name="doubleFoul">Double Foul</string>
+    <string name="newMatch">New Match</string>
+    <string name="amountCardA">25</string>
+    <string name="amountCardB">25</string>
+    <string name="karutaInfo">For more information, please, read about Competitive karuta.</string>
+</resources>
