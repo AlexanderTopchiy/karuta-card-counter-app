@@ -12,7 +12,7 @@ This is a score counter app for the japanese traditional card game Karuta. For m
 
 ## One-file installation
 
-Here is the [APK file](link).
+Here is the [APK file](https://www.dropbox.com/s/cj9hhrnbcejizz1/KarutaCardCounter.apk?dl=0).
 
 ## License
 ```
