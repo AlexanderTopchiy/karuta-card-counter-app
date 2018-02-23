@@ -31,53 +31,26 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/playerA"
-                    android:textColor="@color/player"
-                    android:textSize="20sp" />
+                    style="@style/player"
+                    android:text="@string/playerA" />
 
                 <TextView
+                    style="@style/score"
                     android:id="@+id/player_a_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="@string/amountCardA"
-                    android:textColor="@color/score"
-                    android:textSize="56sp" />
+                    android:text="@string/amountCardA" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="knockedCardForPlayerA"
                     android:text="@string/knockedCard" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="foulForPlayerA"
                     android:text="@string/foul" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="doubleFoulForPlayerA"
                     android:text="@string/doubleFoul" />
 
@@ -96,53 +69,26 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="@string/playerB"
-                    android:textColor="@color/player"
-                    android:textSize="20sp" />
+                    style="@style/player"
+                    android:text="@string/playerB" />
 
                 <TextView
+                    style="@style/score"
                     android:id="@+id/player_b_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text="@string/amountCardB"
-                    android:textColor="@color/score"
-                    android:textSize="56sp" />
+                    android:text="@string/amountCardB" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="knockedCardForPlayerB"
                     android:text="@string/knockedCard" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="foulForPlayerB"
                     android:text="@string/foul" />
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@color/button"
+                    style="@style/button"
                     android:onClick="doubleFoulForPlayerB"
                     android:text="@string/doubleFoul" />
 
